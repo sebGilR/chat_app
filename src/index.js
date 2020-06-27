@@ -11,7 +11,13 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 
 const app = firebase.initializeApp({
-
+  apiKey: FB_KEY,
+  authDomain: "chat-app-ca8ee.firebaseapp.com",
+  databaseURL: DB_URL,
+  projectId: "chat-app-ca8ee",
+  storageBucket: "chat-app-ca8ee.appspot.com",
+  messagingSenderId: "163488329574",
+  appId: "1:163488329574:web:34e9afd89252de83e322a7"
 })
 
 const routing = (
