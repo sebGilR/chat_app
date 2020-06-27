@@ -66,8 +66,28 @@ class DashboardComponent extends React.Component {
 
   signOut = () => firebase.auth().signOut()
 
-  selectChat = (chatIndex) => {
-    this.setState({ selectedChat: chatIndex });
+  selectChat = async (chatIndex) => {
+    await this.setState({ selectedChat: chatIndex });
+
+    this.messageRead();
+  };
+
+  messageRead = () => {
+    const docKey = this.buildDocKey(this.state.chats[this.state.selectedChat].users.filter(usr => usr !== this.state.email)[0]);
+
+    if (this.notAuthorClicked(this.state.selectedChat)) {
+      firebase
+        .firestore()
+        .collection('chats')
+        .doc(docKey)
+        .update({ receiverHasRead: true })
+    } else {
+      console.log('Clicked your own message')
+    }
+  }
+
+  notAuthorClicked = (chatIndex) => {
+    return this.state.chats[chatIndex].messages[this.state.chats[chatIndex].messages.length - 1].sender !== this.state.email;
   };
 
   newChatClicked = () => {
