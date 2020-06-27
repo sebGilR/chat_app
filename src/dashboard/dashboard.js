@@ -33,12 +33,13 @@ class DashboardComponent extends React.Component {
           this.state.newChatVisible ?
             null :
             <ChatViewComponent
+              messageReadFn={this.messageRead}
               user={this.state.email}
               chat={this.state.chats[this.state.selectedChat]}></ChatViewComponent>
         }
         {
           this.state.selectedChat !== null && !this.state.newChatVisible ?
-            <ChatboxComponent submitMessageFn={this.submitMessage}></ChatboxComponent> :
+            <ChatboxComponent messageReadFn={this.messageRead} submitMessageFn={this.submitMessage}></ChatboxComponent> :
             null
         }
         <Button onClick={this.signOut} className={classes.signOutBtn}>Sign out</Button>

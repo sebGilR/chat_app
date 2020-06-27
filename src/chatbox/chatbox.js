@@ -36,7 +36,7 @@ class ChatboxComponent extends React.Component {
   messageValid = (text) => text && text.replace(/\s/g, '').length
 
   userFocused = () => {
-    console.log('Input clicked')
+    this.props.messageReadFn();
   }
 
   submitMessage = () => {

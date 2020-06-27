@@ -22,7 +22,7 @@ class ChatViewComponent extends React.Component {
           <div className={classes.chatHeader}>
             Chat with {chat.users.filter(friend => friend !== user)[0]}
           </div>
-          <main id='chatview-container' className={classes.content}>
+          <main id='chatview-container' className={classes.content} onClick={this.userFocused}>
             {
               chat.messages.map((msg, index) => {
                 return (
@@ -36,6 +36,10 @@ class ChatViewComponent extends React.Component {
         </div>
       );
     }
+  }
+
+  userFocused = () => {
+    this.props.messageReadFn();
   }
 }
 
