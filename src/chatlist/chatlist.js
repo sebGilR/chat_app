@@ -22,10 +22,68 @@ class ChatListComponent extends React.Component {
   }
 
   render() {
+    const { classes } = this.props;
 
-    return (
-      <div>Chatlist here. </div>
-    );
+    if (this.props.chats.length > 0) {
+      return (
+        <div className={classes.root}>
+          <Button variant='contained' fullWidth color='primary' onClick={this.newChat} className={classes.newChatBtn}>
+            New message
+          </Button>
+          <List>
+            {
+              this.props.chats.map((chat, index) => {
+                return (
+                  <div key={index}>
+                    <ListItem onClick={() => this.selectChat(index)}
+                      className={classes.listItem}
+                      selected={this.props.selectedChat === index}
+                      alignItems='flex-start'>
+                      <ListItemAvatar>
+                        <Avatar alt='Remy Sharp'>
+                          {
+                            chat.users.filter(user => user !== this.props.userEmail)[0].split('')[0]
+                          }
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={chat.users.filter(user => user !== this.props.userEmail)[0]}
+                        secondary={
+                          <React.Fragment>
+                            <Typography component='span' color='textPrimary'>
+                              {chat.messages[chat.messages.length - 1].message.substring(0, 30)}
+                            </Typography>
+                          </React.Fragment>
+                        }>
+
+                      </ListItemText>
+                    </ListItem>
+                    <Divider></Divider>
+                  </div>
+                );
+              })
+            }
+          </List>
+        </div>
+      );
+    } else {
+      return (
+        <div className={classes.root}>
+          <Button variant='contained' fullWidth onClick={this.newChat} className={classes.newChatBtn} color='primary'>
+            New message
+        </Button>
+          <List></List>
+        </div>
+      );
+    };
+  };
+
+  newChat = () => {
+    console.log('requested new chat')
+  }
+
+  selectChat = (index) => {
+    console.log('select chat', index)
   }
 }
 
