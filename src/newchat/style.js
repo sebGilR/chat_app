@@ -11,27 +11,20 @@ const style = theme => ({
     },
   },
   paper: {
-    marginTop: theme.spacing() * 8,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
     padding: `${theme.spacing() * 2}px ${theme.spacing() * 3}px ${theme.spacing() * 3}px`,
+    position: 'absolute',
+    width: '350px',
+    top: '50px',
+    left: 'calc(50% + 150px - 175px)'
+  },
+  input: {
   },
   form: {
     width: '100%',
     marginTop: theme.spacing(),
   },
   submit: {
-    marginTop: theme.spacing() * 3,
-  },
-  noAccountHeader: {
-    width: '100%'
-  },
-  signUpLink: {
-    width: '100%',
-    textDecoration: 'none',
-    color: '#303f9f',
-    fontWeight: 'bolder'
+    marginTop: theme.spacing() * 3
   },
   errorText: {
     color: 'red',
