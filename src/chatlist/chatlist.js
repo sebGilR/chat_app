@@ -42,12 +42,12 @@ class ChatListComponent extends React.Component {
                       <ListItemAvatar>
                         <Avatar alt='Remy Sharp'>
                           {
-                            chat.users.filter(user => user !== this.props.userEmail)[0].split('')[0]
+                            chat.users.filter(user => user !== this.props.email)[0].split('')[0]
                           }
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
-                        primary={chat.users.filter(user => user !== this.props.userEmail)[0]}
+                        primary={chat.users.filter(user => user !== this.props.email)[0]}
                         secondary={
                           <React.Fragment>
                             <Typography component='span' color='textPrimary'>
