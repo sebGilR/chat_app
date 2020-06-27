@@ -37,7 +37,7 @@ class ChatListComponent extends React.Component {
                   <div key={index}>
                     <ListItem onClick={() => this.selectChat(index)}
                       className={classes.listItem}
-                      selected={this.props.selectedChat === index}
+                      selected={this.props.selectedChatIndex === index}
                       alignItems='flex-start'>
                       <ListItemAvatar>
                         <Avatar alt='Remy Sharp'>
@@ -83,7 +83,7 @@ class ChatListComponent extends React.Component {
   }
 
   selectChat = (index) => {
-    console.log('select chat', index)
+    this.props.selectChatFn(index)
   }
 }
 

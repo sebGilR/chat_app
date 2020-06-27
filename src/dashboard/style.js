@@ -1,23 +1,14 @@
 const style = theme => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    height: 'calc(100% - 35px)',
+  signOutBtn: {
     position: 'absolute',
-    left: '0',
+    bottom: '0px',
+    left: '0px',
     width: '300px',
-    boxShadow: '0px 0px 2px black'
-  },
-  listItem: {
-    cursor: 'pointer'
-  },
-  newChatBtn: {
-    borderRadius: '0px'
-  },
-  unreadMessage: {
-    color: 'red',
-    position: 'absolute',
-    top: '0',
-    right: '5px'
+    borderRadius: '0px',
+    backgroundColor: '#227092',
+    height: '35px',
+    boxShadow: '0px 0px 2px black',
+    color: 'white'
   }
 });
 
