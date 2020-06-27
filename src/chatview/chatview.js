@@ -26,7 +26,7 @@ class ChatViewComponent extends React.Component {
             {
               chat.messages.map((msg, index) => {
                 return (
-                  <div key={index} className={msg.sender === user ? classes.userSent : classes.friendSent}>
+                  <div key={index} className={msg.sender === user ? classes.friendSent : classes.userSent}>
                     {msg.message}
                   </div>
                 );

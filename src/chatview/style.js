@@ -18,7 +18,7 @@ const style = theme => ({
     boxSizing: 'border-box',
     wordWrap: 'break-word',
     marginTop: '10px',
-    backgroundColor: '#707BC4',
+    backgroundColor: '#38405f',
     color: 'white',
     width: '300px',
     borderRadius: '10px'
