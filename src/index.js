@@ -26,6 +26,7 @@ const routing = (
       <Route path='/login' component={LoginComponent}></Route>
       <Route path='/signup' component={SignupComponent}></Route>
       <Route path='/dashboard' component={DashboardComponent}></Route>
+      <Route path='/' component={DashboardComponent}></Route>
     </div>
   </Router>
 )
