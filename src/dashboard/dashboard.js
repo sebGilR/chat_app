@@ -101,7 +101,7 @@ class DashboardComponent extends React.Component {
   signOut = () => firebase.auth().signOut()
 
   selectChat = async (chatIndex) => {
-    await this.setState({ selectedChat: chatIndex });
+    await this.setState({ selectedChat: chatIndex, newChatVisible: false });
 
     this.messageRead();
   };
