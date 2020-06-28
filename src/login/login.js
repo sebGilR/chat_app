@@ -80,7 +80,15 @@ class LoginComponent extends React.Component {
         this.setState({ loginError: 'Server error' });
         console.log(error)
       });
-  }
+  };
+
+  componentDidMount = () => {
+    firebase.auth().onAuthStateChanged(async _usr => {
+      if (_usr) {
+        this.props.history.push('/dashboard');
+      }
+    });
+  };
 };
 
 export default withStyles(style)(LoginComponent);

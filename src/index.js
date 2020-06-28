@@ -26,6 +26,9 @@ const routing = (
       <Route exact path='/'>
         <Redirect to='/login'></Redirect>
       </Route>
+      <Route exact path='/index.html'>
+        <Redirect to='/login'></Redirect>
+      </Route>
       <Route path='/login' component={LoginComponent}></Route>
       <Route path='/signup' component={SignupComponent}></Route>
       <Route path='/dashboard' component={DashboardComponent}></Route>
