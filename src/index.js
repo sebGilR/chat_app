@@ -11,9 +11,9 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 
 const app = firebase.initializeApp({
-  apiKey: REACT_APP_FB_KEY,
+  apiKey: process.env.REACT_APP_FB_KEY,
   authDomain: "chat-app-ca8ee.firebaseapp.com",
-  databaseURL: REACT_APP_DB_URL,
+  databaseURL: process.env.REACT_APP_DB_URL,
   projectId: "chat-app-ca8ee",
   storageBucket: "chat-app-ca8ee.appspot.com",
   messagingSenderId: "163488329574",
