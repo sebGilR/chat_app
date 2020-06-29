@@ -25,7 +25,9 @@ const style = theme => ({
     marginTop: theme.spacing() * 3,
   },
   noAccountHeader: {
-    width: '100%'
+    width: '100%',
+    marginTop: '15px',
+    fontSize: '12px'
   },
   signUpLink: {
     width: '100%',
