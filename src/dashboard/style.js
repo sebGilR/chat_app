@@ -1,7 +1,7 @@
 const style = theme => ({
   signOutBtn: {
     position: 'absolute',
-    bottom: '0px',
+    top: '0px',
     left: '0px',
     width: '300px',
     borderRadius: '0px',
