@@ -24,6 +24,7 @@ class DashboardComponent extends React.Component {
 
     return (
       <div>
+        <Button onClick={this.signOut} className={classes.signOutBtn} id='sign_out'>Sign out</Button>
         <ChatListComponent history={this.props.history}
           newChatClickedFn={this.newChatClicked}
           selectChatFn={this.selectChat}
@@ -48,7 +49,6 @@ class DashboardComponent extends React.Component {
             <NewChatComponent goToChatFn={this.goToChat} newChatSubmitFn={this.newChatSubmit}></NewChatComponent> :
             null
         }
-        <Button onClick={this.signOut} className={classes.signOutBtn} id='sign_out'>Sign out</Button>
       </div>
     );
   };

@@ -7,7 +7,7 @@ const style = theme => ({
     borderRadius: '0px',
     backgroundColor: '#227092',
     height: '35px',
-    boxShadow: '0px 0px 2px black',
+    boxShadow: '0px 0px 1px black',
     color: 'white'
   }
 });
