@@ -6,6 +6,8 @@ This is a React web chat application that allows users to message another user d
 
 [View Live Demo](https://master.d2784691w8uqct.amplifyapp.com/)
 
+NOTE: You can test the app with "testuser@email.com" as the email and "testpass" as the password.
+
 ## Screenshot
 
 ![screenshot](./screenshot.png)
